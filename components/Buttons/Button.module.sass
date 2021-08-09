@@ -13,6 +13,8 @@
 .primary
   background-color: $primary
   color: $white
+  svg
+    fill: $white
 
   &:hover
     background-color: $primaryHover
@@ -25,4 +27,13 @@
   &:hover
     background-color: $primary
     color: $white
-    border: none
+    svg
+      fill: $white
+
+.arrow
+  display: inline-block
+  margin-left: 10px
+  transition: .3s
+
+.down
+  transform: rotate(90deg)
