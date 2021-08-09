@@ -3,12 +3,15 @@ import cn from 'classnames';
 import { IButtonProps } from './Button.props';
 import styles from './Button.module.sass';
 
-const Button = ({ children, appearance }: IButtonProps): JSX.Element => {
+const Button = ({ children, appearance, className, ...props }: IButtonProps): JSX.Element => {
   return (
-    <button className={cn(styles.button, {
-      [styles.primary]: appearance === 'primary',
-      [styles.ghost]: appearance === 'ghost',
-    })}>
+    <button
+      className={cn(styles.button, className, {
+        [styles.primary]: appearance === 'primary',
+        [styles.ghost]: appearance === 'ghost',
+      })}
+      {...props}
+    >
       {children}
     </button>
   );
