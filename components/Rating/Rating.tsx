@@ -27,24 +27,22 @@ const Rating = ({ isEditable = false, rating, setRating, className, ...props }: 
   };
 
   const constructRating = (currentRating: number) => {
-    const updatedArray = ratingArray.map((r: JSX.Element, i: number) => {
-      return (
-        <span
-          className={cn(styles.star, {
-            [styles.filledStar]: i < currentRating,
-            [styles.editable]: isEditable,
-          })}
-          onMouseEnter={() => handleMouseEnter(i + 1)}
-          onMouseLeave={() => handleMouseEnter(rating)}
-          onClick={() => handleClick(i + 1)}
-        >
+    const updatedArray = ratingArray.map((r: JSX.Element, i: number) => (
+      <span
+        className={cn(styles.star, {
+          [styles.filledStar]: i < currentRating,
+          [styles.editable]: isEditable,
+        })}
+        onMouseEnter={() => handleMouseEnter(i + 1)}
+        onMouseLeave={() => handleMouseEnter(rating)}
+        onClick={() => handleClick(i + 1)}
+      >
           <EmptyStar
             tabIndex={isEditable ? 0 : -1}
             onKeydown={(e: KeyboardEvent<SVGElement>) => isEditable && handleSpace(i + 1, e)}
           />
         </span>
-      );
-    });
+    ));
     setRatingArray(updatedArray);
   };
 
