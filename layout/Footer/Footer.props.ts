@@ -1,3 +1,5 @@
 import { DetailedHTMLProps, HTMLAttributes } from 'react';
 
-export interface IFooterProps extends DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement> { }
+export interface IFooterProps extends DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement> {
+  className: string;
+}
