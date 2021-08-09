@@ -3,9 +3,9 @@ import { IHeaderProps } from './Header.props';
 
 const Header = ({ ...props }: IHeaderProps): JSX.Element => {
   return (
-    <div {...props}>
+    <header {...props}>
       Header
-    </div>
+    </header>
   );
 };
 
