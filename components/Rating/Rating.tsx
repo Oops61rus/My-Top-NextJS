@@ -1,7 +1,7 @@
 import React, { KeyboardEvent, useEffect, useState } from 'react';
 import cn from 'classnames';
 import { IRatingProps } from './Rating.props';
-import { EmptyStar } from '../Icons';
+import { EmptyStarIcon } from '../../assets/icons';
 import styles from './Rating.module.sass';
 
 const Rating = ({ isEditable = false, rating, setRating, className, ...props }: IRatingProps): JSX.Element => {
@@ -37,9 +37,9 @@ const Rating = ({ isEditable = false, rating, setRating, className, ...props }: 
         onMouseLeave={() => handleMouseEnter(rating)}
         onClick={() => handleClick(i + 1)}
       >
-          <EmptyStar
+          <EmptyStarIcon
             tabIndex={isEditable ? 0 : -1}
-            onKeydown={(e: KeyboardEvent<SVGElement>) => isEditable && handleSpace(i + 1, e)}
+            onKeyDown={(e: KeyboardEvent<SVGElement>) => isEditable && handleSpace(i + 1, e)}
           />
         </span>
     ));

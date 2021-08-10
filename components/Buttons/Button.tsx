@@ -1,7 +1,7 @@
 import React from 'react';
 import cn from 'classnames';
 import { IButtonProps } from './Button.props';
-import { ArrowIcon } from '../Icons';
+import { ArrowIcon } from '../../assets/icons';
 import styles from './Button.module.sass';
 
 const Button = ({ children, arrow = 'none', appearance, className, ...props }: IButtonProps): JSX.Element => {
