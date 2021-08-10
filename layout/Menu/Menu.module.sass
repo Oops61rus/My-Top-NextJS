@@ -1,0 +1,53 @@
+@import "styles/variables"
+
+.firstLevel
+  display: grid
+  grid-template-columns: 24px 1fr
+  gap: 20px
+  align-items: center
+  font-weight: 500
+  font-size: 18px
+  line-height: 25px
+  transition: .3s
+  margin-top: 20px
+  svg
+    transition: .3s
+
+.firstLevelActive,
+.firstLevel:hover
+  color: $primary
+  svg
+    fill: $primary
+
+.secondLevel
+  margin-bottom: 10px
+  cursor: pointer
+  text-transform: uppercase
+  color: $greyDark
+  font-weight: 300
+  font-size: 12px
+  line-height: 16px
+
+.secondBlock
+  margin-left: 12px
+  margin-top: 15px
+  padding-left: 32px
+
+  border-left: 1px solid #DFDFDF
+
+.secondLevelBlockOpened
+  &:last-child
+    margin-bottom: 20px
+
+.thirdLevel
+  margin-bottom: 10px
+  cursor: pointer
+  color: $greyDark
+  font-size: 14px
+  font-weight: 500
+  line-height: 19px
+  display: block
+
+.thirdLevelActive,
+.thirdLevel:hover
+  color: $primary
