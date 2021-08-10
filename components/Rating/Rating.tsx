@@ -29,7 +29,7 @@ const Rating = ({ isEditable = false, rating, setRating, className, ...props }: 
   const constructRating = (currentRating: number) => {
     const updatedArray = ratingArray.map((r: JSX.Element, i: number) => (
       <span
-        className={cn(styles.star, {
+        className={cn(styles.star, className, {
           [styles.filledStar]: i < currentRating,
           [styles.editable]: isEditable,
         })}
