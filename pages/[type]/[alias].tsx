@@ -1,7 +1,7 @@
 import React from 'react';
 import { GetStaticPaths, GetStaticProps, GetStaticPropsContext } from 'next';
 import axios from 'axios';
-import { ParsedUrlQuery } from 'querystring';
+import { ParsedUrlQuery } from 'node:querystring';
 import { firstLevelMenu } from '../../helpers/helpers';
 import { withLayout } from '../../layout/Layout';
 import { IMenuItem } from '../../interfaces/menu.interface';
