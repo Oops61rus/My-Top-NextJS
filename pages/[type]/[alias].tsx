@@ -4,19 +4,21 @@ import axios from 'axios';
 import { ParsedUrlQuery } from 'node:querystring';
 import { firstLevelMenu } from '../../helpers/helpers';
 import { withLayout } from '../../layout/Layout';
+import TopPageComponent from '../../components/TopPageComponent/TopPageComponent';
 import { IMenuItem } from '../../interfaces/menu.interface';
 import { IProductModel } from '../../interfaces/product.interface';
 import { ITopPageModel, TopLevelCategory } from '../../interfaces/page.interface';
 
-const Course = ({ menu, page, products }: ICourseProps): JSX.Element => {
-  return (
-    <div>
-      {products?.length}
-    </div>
-  );
-};
+const TopPage = ({ firstCategory, page, products }: ITopPageProps): JSX.Element => (
+  <TopPageComponent
+    firstCategory={firstCategory}
+    page={page}
+    products={products}
+  />
+);
 
-export default withLayout(Course);
+
+export default withLayout(TopPage);
 
 export const getStaticPaths: GetStaticPaths = async () => {
   let paths: string[] = [];
@@ -33,7 +35,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
   return { paths, fallback: true };
 };
 
-export const getStaticProps: GetStaticProps<ICourseProps> = async ({ params }: GetStaticPropsContext<ParsedUrlQuery>) => {
+export const getStaticProps: GetStaticProps<ITopPageProps> = async ({ params }: GetStaticPropsContext<ParsedUrlQuery>) => {
   if (!params) {
     return { notFound: true };
   }
@@ -73,10 +75,9 @@ export const getStaticProps: GetStaticProps<ICourseProps> = async ({ params }: G
   } catch {
     return { notFound: true };
   }
-
 };
 
-interface ICourseProps extends Record<string, unknown> {
+interface ITopPageProps extends Record<string, unknown> {
   menu: IMenuItem[];
   firstCategory: TopLevelCategory;
   page: ITopPageModel;
