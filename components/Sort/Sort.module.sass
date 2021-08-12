@@ -1,0 +1,26 @@
+@import "styles/variables"
+
+.sort
+  display: grid
+  grid-template-columns: 1fr 1fr
+  gap: 40px
+  transition: .3s
+
+  &__icon
+    opacity: 0
+    margin-right: 8px
+    transition: .3s
+
+  span
+    display: grid
+    grid-template-columns: 20px 1fr
+    align-items: center
+    gap: 8px
+    cursor: pointer
+
+.active
+  color: $primary
+
+  .sort
+    &__icon
+      opacity: 1
