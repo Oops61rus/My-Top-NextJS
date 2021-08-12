@@ -3,6 +3,7 @@ import Button from './Buttons/Button';
 import Paragraph from './Paragraph/Paragraph';
 import Tag from './Tag/Tag';
 import Rating from './Rating/Rating';
+import { Card, HhCard } from './Card/';
 
 export {
   Htag,
@@ -10,4 +11,6 @@ export {
   Paragraph,
   Tag,
   Rating,
+  HhCard,
+  Card,
 };
