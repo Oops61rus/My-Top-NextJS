@@ -7,6 +7,7 @@ import ServiceIcon from './service.svg';
 import Logo from './logo.svg';
 import HhStarIcon from './hhStar.svg';
 import CheckmarkIcon from './checkmark.svg';
+import SortIcon from './sort.svg';
 
 export {
   ArrowIcon,
@@ -18,4 +19,5 @@ export {
   Logo,
   HhStarIcon,
   CheckmarkIcon,
+  SortIcon,
 };
