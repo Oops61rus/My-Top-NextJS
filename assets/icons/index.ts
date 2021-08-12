@@ -5,7 +5,8 @@ import CoursesIcon from './courses.svg';
 import ProductIcon from './product.svg';
 import ServiceIcon from './service.svg';
 import Logo from './logo.svg';
-import HhStar from './hhStar.svg';
+import HhStarIcon from './hhStar.svg';
+import CheckmarkIcon from './checkmark.svg';
 
 export {
   ArrowIcon,
@@ -15,5 +16,6 @@ export {
   ServiceIcon,
   ProductIcon,
   Logo,
-  HhStar,
+  HhStarIcon,
+  CheckmarkIcon,
 };

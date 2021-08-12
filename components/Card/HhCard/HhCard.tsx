@@ -1,9 +1,9 @@
 import React from 'react';
 import { Card } from '../';
-import { HhStar } from '../../../assets/icons';
+import { HhStarIcon } from '../../../assets/icons';
+import { priceRu } from '../../../helpers/helpers';
 import { IHHCardProps } from './HhCard.props';
 import styles from './HhCard.module.sass';
-import { priceRu } from '../../../helpers/helpers';
 
 const HhCard = ({ count, juniorSalary, middleSalary, seniorSalary }: IHHCardProps): JSX.Element => {
   return (
@@ -17,27 +17,27 @@ const HhCard = ({ count, juniorSalary, middleSalary, seniorSalary }: IHHCardProp
           <div className={styles.salary__title}>Начальный</div>
           <div className={styles.salary__value}>{priceRu(juniorSalary)}</div>
           <div className={styles.salary__rate}>
-            <HhStar className={styles.filled} />
-            <HhStar />
-            <HhStar />
+            <HhStarIcon className={styles.filled} />
+            <HhStarIcon />
+            <HhStarIcon />
           </div>
         </div>
         <div>
           <div className={styles.salary__title}>Средний</div>
           <div className={styles.salary__value}>{priceRu(middleSalary)}</div>
           <div className={styles.salary__rate}>
-            <HhStar className={styles.filled} />
-            <HhStar className={styles.filled} />
-            <HhStar />
+            <HhStarIcon className={styles.filled} />
+            <HhStarIcon className={styles.filled} />
+            <HhStarIcon />
           </div>
         </div>
         <div>
           <div className={styles.salary__title}>Профессионал</div>
           <div className={styles.salary__value}>{priceRu(seniorSalary)}</div>
           <div className={styles.salary__rate}>
-            <HhStar className={styles.filled} />
-            <HhStar className={styles.filled} />
-            <HhStar className={styles.filled} />
+            <HhStarIcon className={styles.filled} />
+            <HhStarIcon className={styles.filled} />
+            <HhStarIcon className={styles.filled} />
           </div>
         </div>
       </Card>

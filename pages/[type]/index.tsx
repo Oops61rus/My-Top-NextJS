@@ -2,7 +2,7 @@ import { GetStaticPaths, GetStaticProps, GetStaticPropsContext } from 'next';
 import axios from 'axios';
 import { ParsedUrlQuery } from 'querystring';
 import { firstLevelMenu } from '../../helpers/helpers';
-import { IMenuItem } from '../../interfaces/menu.interface';
+import { IMenuItem } from '../../interfaces';
 import { withLayout } from '../../layout/Layout';
 
 const Type = ({ firstCategory }: ITypeProps): JSX.Element => {
