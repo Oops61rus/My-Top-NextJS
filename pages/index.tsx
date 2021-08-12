@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { GetStaticProps } from 'next';
 import axios from 'axios';
-import { Button, Htag, Rating, Tag } from '../components';
+import { Button, Htag, Input, Rating, Tag, TextArea } from '../components';
 import { withLayout } from '../layout/Layout';
 import { IMenuItem } from '../interfaces';
 
@@ -10,7 +10,7 @@ function Home({ menu }: IHomeProps): JSX.Element {
 
   return (
     <>
-      <Htag tag={'h1'}>Text</Htag>
+      <Htag tag='h1'>Text</Htag>
       <Button appearance='primary'>Button</Button>
       <Button appearance='ghost' arrow={'down'}>Button</Button>
       <Tag size='s'>hello</Tag>
@@ -19,6 +19,8 @@ function Home({ menu }: IHomeProps): JSX.Element {
       <Tag size='s' color='red' href='https://google.com'>hello</Tag>
       <Tag size='s' color='primary'>hello</Tag>
       <Rating rating={rating} isEditable setRating={setRating} />
+      <Input placeholder='Test'/>
+      <TextArea placeholder='Введите текст' />
     </>
   );
 }

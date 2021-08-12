@@ -7,6 +7,8 @@ import { Card, HhCard } from './Card/';
 import TopPageComponent from './TopPageComponent/TopPageComponent';
 import Advantages from './Advantages/Advantages';
 import Sort from './Sort/Sort';
+import Input from './Input/Input';
+import TextArea from './TextArea/TextArea';
 
 export {
   Htag,
@@ -19,4 +21,6 @@ export {
   TopPageComponent,
   Advantages,
   Sort,
+  Input,
+  TextArea,
 };

@@ -1,6 +1,5 @@
-import { IFirstLevelMenuItem } from '../interfaces/menu.interface';
 import { BookIcon, CoursesIcon, ProductIcon, ServiceIcon } from '../assets/icons';
-import { TopLevelCategory } from '../interfaces/page.interface';
+import { TopLevelCategory, IFirstLevelMenuItem } from '../interfaces';
 
 export const firstLevelMenu: IFirstLevelMenuItem[] = [
   {
