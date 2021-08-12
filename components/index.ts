@@ -6,6 +6,7 @@ import Rating from './Rating/Rating';
 import { Card, HhCard } from './Card/';
 import TopPageComponent from './TopPageComponent/TopPageComponent';
 import Advantages from './Advantages/Advantages';
+import Sort from './Sort/Sort';
 
 export {
   Htag,
@@ -17,4 +18,5 @@ export {
   Card,
   TopPageComponent,
   Advantages,
+  Sort,
 };
