@@ -1,3 +1,5 @@
+@import "styles/mixins"
+
 .title
   display: grid
   grid-template-columns: auto 1fr auto
@@ -11,3 +13,26 @@
   align-items: baseline
   justify-items: left
   gap: 20px
+
+.seo
+  @include mediumText
+
+  h1
+    @include head1
+
+  h2
+    @include head2
+
+  h3
+    @include head3
+
+  p
+    @include mediumText
+
+  ul
+    list-style: disc
+    margin-inline-start: 0
+    margin-inline-end: 0
+    padding-inline-start: 40px
+    margin-block-start: 1em
+    margin-block-end: 1em
