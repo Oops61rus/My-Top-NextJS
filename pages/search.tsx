@@ -1,7 +1,7 @@
 import { GetStaticProps } from 'next';
 import axios from 'axios';
 import { withLayout } from '../layout/Layout';
-import { IMenuItem } from '../interfaces/menu.interface';
+import { IMenuItem } from '../interfaces';
 
 const Search = (): JSX.Element => {
   return (

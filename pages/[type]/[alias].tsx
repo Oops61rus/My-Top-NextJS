@@ -4,10 +4,8 @@ import axios from 'axios';
 import { ParsedUrlQuery } from 'node:querystring';
 import { firstLevelMenu } from '../../helpers/helpers';
 import { withLayout } from '../../layout/Layout';
-import TopPageComponent from '../../components/TopPageComponent/TopPageComponent';
-import { IMenuItem } from '../../interfaces/menu.interface';
-import { IProductModel } from '../../interfaces/product.interface';
-import { ITopPageModel, TopLevelCategory } from '../../interfaces/page.interface';
+import { TopPageComponent } from '../../components/';
+import { IMenuItem, IProductModel, ITopPageModel, TopLevelCategory} from '../../interfaces';
 
 const TopPage = ({ firstCategory, page, products }: ITopPageProps): JSX.Element => (
   <TopPageComponent

@@ -4,6 +4,8 @@ import Paragraph from './Paragraph/Paragraph';
 import Tag from './Tag/Tag';
 import Rating from './Rating/Rating';
 import { Card, HhCard } from './Card/';
+import TopPageComponent from './TopPageComponent/TopPageComponent';
+import Advantages from './Advantages/Advantages';
 
 export {
   Htag,
@@ -13,4 +15,6 @@ export {
   Rating,
   HhCard,
   Card,
+  TopPageComponent,
+  Advantages,
 };

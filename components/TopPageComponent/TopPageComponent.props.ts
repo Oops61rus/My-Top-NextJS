@@ -1,5 +1,4 @@
-import { ITopPageModel, TopLevelCategory } from '../../interfaces/page.interface';
-import { IProductModel } from '../../interfaces/product.interface';
+import { ITopPageModel, TopLevelCategory, IProductModel } from '../../interfaces';
 
 export interface ITopPageComponentProps {
   firstCategory: TopLevelCategory;
