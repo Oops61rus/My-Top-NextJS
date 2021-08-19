@@ -10,6 +10,8 @@ import Sort from './Sort/Sort';
 import Input from './Input/Input';
 import TextArea from './TextArea/TextArea';
 import Search from './Search/Search';
+import Product from './Product/Product';
+import Divider from './Divider/Divider';
 
 export {
   Htag,
@@ -25,4 +27,6 @@ export {
   Input,
   TextArea,
   Search,
+  Product,
+  Divider,
 };
