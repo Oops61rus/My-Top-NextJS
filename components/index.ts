@@ -9,6 +9,7 @@ import Advantages from './Advantages/Advantages';
 import Sort from './Sort/Sort';
 import Input from './Input/Input';
 import TextArea from './TextArea/TextArea';
+import Search from './Search/Search';
 
 export {
   Htag,
@@ -23,4 +24,5 @@ export {
   Sort,
   Input,
   TextArea,
+  Search,
 };
