@@ -5,22 +5,35 @@
   font-weight: 500
   line-height: 35px
   margin: 0
+  @media screen and (max-width: $middle)
+    font-size: 18px
+    line-height: 24px
 
 @mixin head2
   font-size: 22px
   font-weight: 500
   line-height: 30px
   margin: 50px 0 25px
+  @media screen and (max-width: $middle)
+    font-size: 15px
+    line-height: 21px
+    margin: 10px 0 20px
 
 @mixin head3
   font-size: 20px
   font-weight: 600
   line-height: 27px
   margin: 0
+  @media screen and (max-width: $middle)
+    font-size: 14px
+    line-height: 19px
 
 @mixin mediumText
   font-size: 16px
   line-height: 24px
+  @media screen and (max-width: $middle)
+    font-size: 11px
+    line-height: 17px
 
 @mixin customInput
   background: $white
