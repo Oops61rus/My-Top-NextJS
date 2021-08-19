@@ -9,6 +9,7 @@
 .logo
   grid-column: start / logoend
   grid-row: 1 / span 2
+
   img
     border-radius: 5px
 
@@ -35,10 +36,10 @@
     grid-column: middle / end
     font-size: 16px
     line-height: 22px
+
   &_title
     font-weight: bold
     margin-bottom: 5px
-
 
 .title
   font-weight: 600
@@ -79,6 +80,29 @@
 .advantages
   border-left: 2px solid $green
   margin-bottom: 20px
+  padding-left: 15px
 
 .disadvantages
   border-left: 2px solid $red
+  padding-left: 15px
+
+.characteristic
+  &s
+    display: grid
+    gap: 10px
+    grid-template-columns: auto 1fr auto
+    padding-right: 60px
+    align-items: baseline
+
+  &_name
+    font-weight: bold
+    font-size: 16px
+    line-height: 32px
+
+  &_dots
+    border-bottom: 1px dashed $greyLight
+    margin-bottom: 5px
+
+  &_value
+    font-size: 16px
+    line-height: 32px
