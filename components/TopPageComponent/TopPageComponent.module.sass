@@ -6,6 +6,7 @@
   align-items: baseline
   justify-items: left
   gap: 20px
+  margin-bottom: 30px
 
 .hhTitle
   display: grid
@@ -36,3 +37,7 @@
     padding-inline-start: 40px
     margin-block-start: 1em
     margin-block-end: 1em
+
+@media screen and (max-width: $small)
+  .title
+    grid-template-columns: auto 1fr

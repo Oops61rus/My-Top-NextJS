@@ -1,5 +1,6 @@
 import React from 'react';
 import Image from 'next/image'
+import cn from 'classnames';
 import { IProductProps } from './Product.props';
 import { Button, Card, Divider, Rating, Tag } from '../';
 import { declensionsOfNums, priceRu } from '../../helpers/helpers';
@@ -60,6 +61,7 @@ const Product = ({ product, className, ...props }: IProductProps): JSX.Element =
       className={styles.rateTitle}
     >
       {product.reviewCount}
+      &nbsp;
       {declensionsOfNums(product.reviewCount, ['отзыв', 'отзыва', 'отзывов'])}
     </div>
 
@@ -94,7 +96,7 @@ const Product = ({ product, className, ...props }: IProductProps): JSX.Element =
       )}
     </div>
 
-    <Divider className={styles.hr} />
+    <Divider className={cn(styles.hr, styles.hr2)} />
 
     <div className={styles.actions}>
       <Button appearance='primary'>Узнать подробнее</Button>
