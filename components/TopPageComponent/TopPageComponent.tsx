@@ -48,7 +48,7 @@ const TopPageComponent = ({ page, products, firstCategory }: ITopPageComponentPr
         page?.seoText && <div className={styles.seo} dangerouslySetInnerHTML={{ __html: page.seoText }} />
       }
       <Htag tag={'h2'}>Получаемые навыки</Htag>
-      {page.tags.map(tag => <Tag color='primary' key={tag}>{tag}</Tag>)}
+      {page.tags.map(tag => <Tag color='primary' className={styles.getSkills} key={tag}>{tag}</Tag>)}
     </div>
   );
 };

@@ -13,22 +13,28 @@
   img
     border-radius: 5px
 
-.title, .tags
+.title,
+.tags
   grid-column: titlestart / middle
 
-.price, .priceTitle
+.price,
+.priceTitle
   grid-column: pricestart / priceend
   white-space: nowrap
 
-.credit, .creditTitle
+.credit,
+.creditTitle
   grid-column: creditstart / creditend
   white-space: nowrap
 
-.rating, .rateTitle
+.rating,
+.rateTitle
   grid-column: ratestart / end
   white-space: nowrap
 
-.hr, .description, .actions
+.hr,
+.description,
+.actions
   grid-column: start / end
 
 .feature
@@ -50,7 +56,8 @@
   line-height: 27px
   align-self: flex-end
 
-.price, .credit
+.price,
+.credit
   font-size: 20px
   line-height: 27px
   align-self: flex-end
@@ -58,7 +65,10 @@
 .rating
   align-self: flex-end
 
-.priceTitle, .creditTitle, .rateTitle, .month
+.priceTitle,
+.creditTitle,
+.rateTitle,
+.month
   font-weight: 300
   font-size: 14px
   line-height: 19px
@@ -168,13 +178,34 @@
 
 @media screen and (max-width: $small)
   .product
+    padding: 20px
     grid-template-columns: 70px 30px 1fr
     grid-template-areas: 'logo . title' 'logo . tags' 'priceTitle priceTitle price' 'creditTitle creditTitle credit' 'rateTitle rateTitle rating' 'hr hr hr' 'description description description' 'feature feature feature' 'advBlock advBlock advBlock' 'hr2 hr2 hr2' 'actions actions actions'
 
-  .price, .credit, .rating
+  .price,
+  .credit,
+  .rating
     margin-top: 10px
 
 @media screen and (max-width: $x-small)
   .product
+    padding: 15px
     grid-template-columns: 1fr
     grid-template-areas: 'logo' 'title' 'tags' 'price' 'priceTitle' 'credit' 'creditTitle' 'rating' 'rateTitle' 'hr' 'description' 'feature' 'advBlock' 'hr2' 'actions'
+
+  .characteristics
+    padding: 0
+
+  .reviewButton
+    margin: 5px 0 0
+
+  .logo, .title
+    margin-bottom: 10px
+
+  .tags
+    margin: 0
+
+  .description,
+  .characteristic_name,
+  .characteristic_value
+    font-size: 14px
