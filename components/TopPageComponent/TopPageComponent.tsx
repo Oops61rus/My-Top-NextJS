@@ -1,13 +1,16 @@
 import React, { useReducer } from 'react';
+import { sortReducer } from '../../reducers/sort.reducer';
+import { Advantages, HhCard, Htag, Product, Sort, Tag } from '../';
 import { ITopPageComponentProps } from './TopPageComponent.props';
-import { Advantages, HhCard, Htag, Sort, Tag } from '../';
 import { TopLevelCategory } from '../../interfaces';
 import { SortEnum } from '../Sort/Sort.props';
 import styles from './TopPageComponent.module.sass';
-import { sortReducer } from '../../reducers/sort.reducer';
 
 const TopPageComponent = ({ page, products, firstCategory }: ITopPageComponentProps): JSX.Element => {
-  const [{ products: sortedProducts, sort }, dispatchSort] = useReducer(sortReducer, { products, sort: SortEnum.Rating });
+  const [{ products: sortedProducts, sort }, dispatchSort] = useReducer(sortReducer, {
+    products,
+    sort: SortEnum.Rating,
+  });
 
   const setSort = (sort: SortEnum): void => {
     dispatchSort({ type: sort });
@@ -24,21 +27,23 @@ const TopPageComponent = ({ page, products, firstCategory }: ITopPageComponentPr
         />
       </div>
       <div>
-        {sortedProducts && sortedProducts.map(product => <div key={product._id}>{product.title}</div>)}
+        {sortedProducts &&
+        sortedProducts.map(product => (
+          <Product key={product._id} product={product} />
+        ))}
       </div>
       <div className={styles.hhTitle}>
         <Htag tag={'h2'}>Вакансии - {page.category}</Htag>
         <Tag color={'red'} size={'m'}>hh.ru</Tag>
       </div>
       {firstCategory === TopLevelCategory.Courses && page.hh && <HhCard {...page.hh} />}
-      {
-        page.advantages &&
-        page.advantages.length > 0 &&
+      {page.advantages &&
+      page.advantages.length > 0 && (
         <>
           <Htag tag={'h2'}>Преимущества</Htag>
           <Advantages advantages={page.advantages} />
         </>
-      }
+      )}
       {
         page?.seoText && <div className={styles.seo} dangerouslySetInnerHTML={{ __html: page.seoText }} />
       }
