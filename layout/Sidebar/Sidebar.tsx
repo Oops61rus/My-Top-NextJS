@@ -6,14 +6,13 @@ import { Menu } from '../';
 import { Logo } from '../../assets/icons';
 import styles from './Sidebar.module.sass';
 
-const Sidebar = ({ className, ...props }: ISidebarProps): JSX.Element => {
-  return (
-    <div className={cn(styles.sidebar, className)} {...props}>
-      <Logo className={styles.logo} />
-      <Search />
-      <Menu />
-    </div>
-  );
-};
+const Sidebar = ({ className, ...props }: ISidebarProps): JSX.Element => (
+  <div className={cn(styles.sidebar, className)} {...props}>
+    <Logo className={styles.logo} />
+    <Search />
+    <Menu />
+  </div>
+);
+
 
 export default Sidebar;
