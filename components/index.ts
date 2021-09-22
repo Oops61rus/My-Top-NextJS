@@ -12,6 +12,7 @@ import TextArea from './TextArea/TextArea';
 import Search from './Search/Search';
 import Product from './Product/Product';
 import Divider from './Divider/Divider';
+import Review from './Review/Review';
 
 export {
   Htag,
@@ -29,4 +30,5 @@ export {
   Search,
   Product,
   Divider,
+  Review,
 };
