@@ -1,0 +1,36 @@
+@import 'styles/variables'
+
+.review
+  align-items: center
+  display: grid
+  font-size: 14px
+  gap: 10px
+  grid-template-columns: [start] auto 1fr auto auto [end]
+  line-height: 24px
+
+.description
+  grid-column: start / end
+
+.date
+  margin-right: 10px
+
+.name
+  font-weight: bold
+  margin-right: 10px
+
+@media screen and (max-width: $small)
+  .review
+    grid-template-columns: [start] 30px [titlestart] auto [dateend] 1fr [end]
+
+  .title
+    grid-column: titlestart / end
+
+  .date
+    grid-column: start / dateend
+
+@media screen and (max-width: $x-small)
+  .date
+    grid-column: start / end
+
+  .rating
+    grid-column: start / end

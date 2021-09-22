@@ -9,6 +9,7 @@ import HhStarIcon from './hhStar.svg';
 import CheckmarkIcon from './checkmark.svg';
 import SortIcon from './sort.svg';
 import GlassIcon from './glass.svg';
+import UserIcon from './user.svg';
 
 export {
   ArrowIcon,
@@ -22,4 +23,5 @@ export {
   CheckmarkIcon,
   SortIcon,
   GlassIcon,
+  UserIcon,
 };
