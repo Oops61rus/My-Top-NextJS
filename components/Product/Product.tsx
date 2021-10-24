@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import Image from 'next/image';
 import cn from 'classnames';
 import { IProductProps } from './Product.props';
-import { Button, Card, Divider, Rating, Review, Tag } from '../';
+import { Button, Card, Divider, Rating, Review, ReviewForm, Tag } from '../';
 import { declensionsOfNums, priceRu } from '../../helpers/helpers';
 import styles from './Product.module.sass';
 
@@ -119,8 +119,12 @@ const Product = ({ product, className, ...props }: IProductProps): JSX.Element =
         [styles.closed]: !isReviewOpened,
       })}>
         {product.reviews.map(review => (
-          <Review key={review._id} review={review} />
+          <>
+            <Review key={review._id} review={review} />
+            <Divider/>
+          </>
         ))}
+        <ReviewForm productId={product._id} />
       </Card>
     </>
   );
