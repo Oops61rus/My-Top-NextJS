@@ -119,10 +119,10 @@ const Product = ({ product, className, ...props }: IProductProps): JSX.Element =
         [styles.closed]: !isReviewOpened,
       })}>
         {product.reviews.map(review => (
-          <>
-            <Review key={review._id} review={review} />
+          <div key={review._id}>
+            <Review review={review} />
             <Divider/>
-          </>
+          </div>
         ))}
         <ReviewForm productId={product._id} />
       </Card>

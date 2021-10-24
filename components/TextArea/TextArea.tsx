@@ -1,13 +1,24 @@
-import React from 'react';
+import React, { ForwardedRef, forwardRef } from 'react';
 import cn from 'classnames';
 import { ITextAreaProps } from './TextArea.props';
 import styles from './TextArea.module.sass';
 
-const TextArea = ({ className, ...props }: ITextAreaProps): JSX.Element => (
-  <textarea
-    className={cn(className, styles.textarea)}
-    {...props}
-  />
-);
+export const TextArea = forwardRef(({
+                                      className,
+                                      error,
+                                      ...props
+                                    }: ITextAreaProps, ref: ForwardedRef<HTMLTextAreaElement>): JSX.Element => (
 
-export default TextArea;
+  <div className={cn(styles.textAreaWrapper, className)}>
+    <textarea
+      className={cn(styles.textarea, {
+        [styles.error]: error,
+      })}
+      {...props}
+      ref={ref}
+    />
+    {error && (
+      <span className={styles.errorMessage}>{error.message}</span>
+    )}
+  </div>
+));

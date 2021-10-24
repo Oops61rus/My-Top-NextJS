@@ -1,4 +1,17 @@
 @import "styles/mixins"
+@import "styles/variables"
+
+.inputWrapper
+  position: relative
 
 .input
   @include customInput
+
+.error
+  border: $redErrorBorder
+
+.errorMessage
+  position: absolute
+  bottom: -20px
+  left: 0
+  color: $red

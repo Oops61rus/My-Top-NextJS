@@ -1,4 +1,17 @@
 @import "styles/mixins"
 
+.textAreaWrapper
+  position: relative
+
 .textarea
   @include customInput
+  width: 100%
+
+.error
+  border: $redErrorBorder
+
+.errorMessage
+  position: absolute
+  bottom: -15px
+  left: 0
+  color: $red
