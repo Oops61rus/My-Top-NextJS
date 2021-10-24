@@ -22,8 +22,7 @@
   grid-template-columns: auto 1fr
   gap: 20px
 
-.success
-  background: $greenLight
+.panel
   padding: 20px
   position: relative
   border-radius: 5px
@@ -31,7 +30,10 @@
   font-size: 14px
   line-height: 24px
 
-.successTitle
+.success
+  background: $greenLight
+
+.successTitle, .errorTitle
   font-weight: bold
 
 .close
@@ -39,6 +41,12 @@
   top: 20px
   right: 20px
   cursor: pointer
+
+.error
+  background: $redLight
+  .close
+    path
+      stroke: $red
 
 @media screen and (max-width: $large)
   .reviewForm
