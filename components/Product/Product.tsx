@@ -4,6 +4,7 @@ import cn from 'classnames';
 import { IProductProps } from './Product.props';
 import { Button, Card, Divider, Rating, Review, ReviewForm, Tag } from '../';
 import { declensionsOfNums, priceRu } from '../../helpers/helpers';
+import { API } from '../../helpers/api';
 import styles from './Product.module.sass';
 
 const Product = ({ product, className, ...props }: IProductProps): JSX.Element => {
@@ -14,7 +15,7 @@ const Product = ({ product, className, ...props }: IProductProps): JSX.Element =
       <Card className={styles.product}>
         <div className={styles.logo}>
           <Image
-            src={process.env.NEXT_PUBLIC_DOMAIN + product.image}
+            src={API.domain.main + product.image}
             alt={product.title}
             width={70}
             height={70}
