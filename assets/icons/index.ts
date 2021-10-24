@@ -10,6 +10,7 @@ import CheckmarkIcon from './checkmark.svg';
 import SortIcon from './sort.svg';
 import GlassIcon from './glass.svg';
 import UserIcon from './user.svg';
+import CloseIcon from './close.svg';
 
 export {
   ArrowIcon,
@@ -24,4 +25,5 @@ export {
   SortIcon,
   GlassIcon,
   UserIcon,
+  CloseIcon,
 };

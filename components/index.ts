@@ -13,6 +13,7 @@ import Search from './Search/Search';
 import Product from './Product/Product';
 import Divider from './Divider/Divider';
 import Review from './Review/Review';
+import ReviewForm from './ReviewForm/ReviewForm';
 
 export {
   Htag,
@@ -31,4 +32,5 @@ export {
   Product,
   Divider,
   Review,
+  ReviewForm,
 };
