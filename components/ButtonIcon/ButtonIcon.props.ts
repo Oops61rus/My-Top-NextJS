@@ -1,9 +1,9 @@
 import { ButtonHTMLAttributes, DetailedHTMLProps } from 'react';
-import { CloseIcon, MenuIcon, UpIcon } from '../../assets/icons';
+import { CrossIcon, MenuIcon, UpIcon } from '../../assets/icons';
 
 export const icons = {
   UpIcon,
-  CloseIcon,
+  CrossIcon,
   MenuIcon,
 };
 
