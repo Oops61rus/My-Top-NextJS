@@ -10,7 +10,6 @@
 
 .header
   grid-area: header
-  display: none
 
 .sidebar
   grid-area: sidebar
@@ -25,12 +24,10 @@
   .wrapper
     grid-template-columns: minmax(320px, 1fr)
     grid-template-areas: "header" "body" "footer"
+    gap: 10px
 
   .sidebar
     display: none
-
-  .header
-    display: block
 
   .body
     padding: 15px
