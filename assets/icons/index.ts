@@ -11,6 +11,7 @@ import SortIcon from './sort.svg';
 import GlassIcon from './glass.svg';
 import UserIcon from './user.svg';
 import CloseIcon from './close.svg';
+import UpIcon from './up.svg';
 
 export {
   ArrowIcon,
@@ -26,4 +27,5 @@ export {
   GlassIcon,
   UserIcon,
   CloseIcon,
+  UpIcon,
 };
