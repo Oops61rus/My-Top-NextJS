@@ -1,10 +1,10 @@
 import React from 'react';
 import cn from 'classnames';
 import { format } from 'date-fns';
-import { IFooterProps } from './Footer.props';
+import { FooterProps } from './Footer.props';
 import styles from './Footer.module.sass';
 
-const Footer = ({ className, ...props }: IFooterProps): JSX.Element => (
+const Footer = ({ className, ...props }: FooterProps): JSX.Element => (
   <footer
     className={cn(className, styles.footer)}
     {...props}

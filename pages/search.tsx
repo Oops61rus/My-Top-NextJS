@@ -14,7 +14,7 @@ const Search = (): JSX.Element => {
 
 export default withLayout(Search);
 
-export const getStaticProps: GetStaticProps<ISearchProps> = async () => {
+export const getStaticProps: GetStaticProps<SearchProps> = async () => {
   const firstCategory = 0;
   const { data: menu } = await axios
     .post<IMenuItem[]>(API.topPage.find, {
@@ -28,7 +28,7 @@ export const getStaticProps: GetStaticProps<ISearchProps> = async () => {
   };
 };
 
-interface ISearchProps extends Record<string, unknown> {
+interface SearchProps extends Record<string, unknown> {
   menu: IMenuItem[];
   firstCategory: number;
 }

@@ -1,9 +1,9 @@
 import React from 'react';
 import cn from 'classnames';
-import { IParagraphProps } from './Paragraph.props';
+import { ParagraphProps } from './Paragraph.props';
 import styles from './Paragraph.module.sass';
 
-const Paragraph = ({ size = 'm', children, className, ...props }: IParagraphProps): JSX.Element => (
+const Paragraph = ({ size = 'm', children, className, ...props }: ParagraphProps): JSX.Element => (
   <p
     className={cn(styles.paragraph, className, {
       [styles.s]: size === 's',

@@ -2,10 +2,10 @@ import React from 'react';
 import { Card } from '../';
 import { HhStarIcon } from '../../../assets/icons';
 import { priceRu } from '../../../helpers/helpers';
-import { IHHCardProps } from './HhCard.props';
+import { HHCardProps } from './HhCard.props';
 import styles from './HhCard.module.sass';
 
-const HhCard = ({ count, juniorSalary, middleSalary, seniorSalary }: IHHCardProps): JSX.Element => (
+const HhCard = ({ count, juniorSalary, middleSalary, seniorSalary }: HHCardProps): JSX.Element => (
   <div className={styles.hh}>
     <Card className={styles.count}>
       <div className={styles.count__title}>Всего вакансий</div>

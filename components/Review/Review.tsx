@@ -2,12 +2,12 @@ import React from 'react';
 import cn from 'classnames';
 import { format } from 'date-fns';
 import { ru } from 'date-fns/locale';
-import { IReviewProps } from './Review.props';
+import { ReviewProps } from './Review.props';
 import { UserIcon } from '../../assets/icons';
 import { Rating } from '../';
 import styles from './Review.module.sass';
 
-const Review = ({ review, className, ...props }: IReviewProps): JSX.Element => {
+const Review = ({ review, className, ...props }: ReviewProps): JSX.Element => {
   const { name, title, description, rating, createdAt } = review;
 
   return (

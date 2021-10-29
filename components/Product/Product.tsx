@@ -2,7 +2,7 @@ import React, { ForwardedRef, forwardRef, useRef, useState } from 'react';
 import Image from 'next/image';
 import cn from 'classnames';
 import { motion } from 'framer-motion';
-import { IProductProps } from './Product.props';
+import { ProductProps } from './Product.props';
 import { Button, Card, Divider, Rating, Review, ReviewForm, Tag } from '../';
 import { declensionsOfNums, priceRu } from '../../helpers/helpers';
 import { API } from '../../helpers/api';
@@ -12,7 +12,7 @@ const Product = motion(forwardRef(({
                                      product,
                                      className,
                                      ...props
-                                   }: IProductProps, ref: ForwardedRef<HTMLDivElement>): JSX.Element => {
+                                   }: ProductProps, ref: ForwardedRef<HTMLDivElement>): JSX.Element => {
   const [isReviewOpened, setIsReviewOpened] = useState<boolean>(false);
   const reviewRef = useRef<HTMLDivElement>(null);
 

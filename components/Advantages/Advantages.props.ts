@@ -1,5 +1,5 @@
 import { ITopPageAdvantage } from '../../interfaces';
 
-export interface IAdvantagesProps {
+export interface AdvantagesProps {
   advantages: ITopPageAdvantage[]
 }

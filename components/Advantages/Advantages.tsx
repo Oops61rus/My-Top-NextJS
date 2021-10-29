@@ -1,9 +1,9 @@
 import React from 'react';
-import { IAdvantagesProps } from './Advantages.props';
+import { AdvantagesProps } from './Advantages.props';
 import { CheckmarkIcon } from '../../assets/icons';
 import styles from './Advantages.module.sass';
 
-const Advantages = ({ advantages }: IAdvantagesProps): JSX.Element => (
+const Advantages = ({ advantages }: AdvantagesProps): JSX.Element => (
   <>
     {
       advantages.map(advantage => (
