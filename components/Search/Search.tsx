@@ -1,12 +1,12 @@
 import React, { useState, KeyboardEvent } from 'react';
 import { useRouter } from 'next/router';
 import cn from 'classnames';
-import { ISearchProps } from './Search.props';
+import { SearchProps } from './Search.props';
 import { Button, Input } from '../';
 import { GlassIcon } from '../../assets/icons';
 import styles from './Search.module.sass'
 
-const Search = ({ className, ...props}: ISearchProps): JSX.Element => {
+const Search = ({ className, ...props}: SearchProps): JSX.Element => {
   const [search, setSearch] = useState<string>('')
 
   const router = useRouter()

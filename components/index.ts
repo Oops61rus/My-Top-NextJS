@@ -15,6 +15,7 @@ import Divider from './Divider/Divider';
 import Review from './Review/Review';
 import ReviewForm from './ReviewForm/ReviewForm';
 import Up from './Up/Up';
+import ButtonIcon from './ButtonIcon/ButtonIcon';
 
 export {
   Htag,
@@ -35,4 +36,5 @@ export {
   Review,
   ReviewForm,
   Up,
+  ButtonIcon,
 };

@@ -1,7 +1,7 @@
 import React from 'react';
-import { IHeaderProps } from './Header.props';
+import { HeaderProps } from './Header.props';
 
-const Header = ({ ...props }: IHeaderProps): JSX.Element => (
+const Header = ({ ...props }: HeaderProps): JSX.Element => (
   <header {...props}>
     Header
   </header>

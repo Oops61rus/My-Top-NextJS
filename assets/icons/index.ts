@@ -12,6 +12,8 @@ import GlassIcon from './glass.svg';
 import UserIcon from './user.svg';
 import CloseIcon from './close.svg';
 import UpIcon from './up.svg';
+import CrossIcon from './cross.svg'
+import MenuIcon from './menu.svg'
 
 export {
   ArrowIcon,
@@ -28,4 +30,6 @@ export {
   UserIcon,
   CloseIcon,
   UpIcon,
+  CrossIcon,
+  MenuIcon
 };

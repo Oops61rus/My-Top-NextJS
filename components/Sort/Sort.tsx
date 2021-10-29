@@ -1,10 +1,10 @@
 import React from 'react';
 import cn from 'classnames';
-import { ISortProps, SortEnum } from './Sort.props';
+import { SortProps, SortEnum } from './Sort.props';
 import { SortIcon } from '../../assets/icons';
 import styles from './Sort.module.sass';
 
-const Sort = ({ sort, setSort, className, ...props }: ISortProps): JSX.Element => (
+const Sort = ({ sort, setSort, className, ...props }: SortProps): JSX.Element => (
   <div className={cn(styles.sort, className)} {...props}>
       <span
         onClick={() => setSort(SortEnum.Rating)}

@@ -1,6 +1,6 @@
 import React, { ForwardedRef, forwardRef, KeyboardEvent, useEffect, useState } from 'react';
 import cn from 'classnames';
-import { IRatingProps } from './Rating.props';
+import { RatingProps } from './Rating.props';
 import { EmptyStarIcon } from '../../assets/icons';
 import styles from './Rating.module.sass';
 
@@ -11,7 +11,7 @@ export const Rating = forwardRef(({
                                     error,
                                     className,
                                     ...props
-                                  }: IRatingProps, ref: ForwardedRef<HTMLDivElement>): JSX.Element => {
+                                  }: RatingProps, ref: ForwardedRef<HTMLDivElement>): JSX.Element => {
   const [ratingArray, setRatingArray] = useState<JSX.Element[]>(new Array(5).fill(<></>));
 
   useEffect(() => {

@@ -1,11 +1,11 @@
 import React, { Component, FC } from 'react';
-import { ILayoutProps } from './Layout.props';
+import { LayoutProps } from './Layout.props';
 import { Footer, Header, Sidebar } from './';
 import { AppContextProvider, IAppContext } from '../context/app.context';
 import { Up } from '../components';
 import styles from './Layout.module.sass';
 
-const Layout = ({ children, ...props }: ILayoutProps): JSX.Element => (
+const Layout = ({ children, ...props }: LayoutProps): JSX.Element => (
   <div className={styles.wrapper} {...props}>
     <Header className={styles.header} />
     <Sidebar className={styles.sidebar} />

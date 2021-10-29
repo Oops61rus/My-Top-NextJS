@@ -1,6 +1,6 @@
 import { ITopPageModel, TopLevelCategory, IProductModel } from '../../interfaces';
 
-export interface ITopPageComponentProps {
+export interface TopPageComponentProps {
   firstCategory: TopLevelCategory;
   page: ITopPageModel;
   products: IProductModel[];

@@ -4,12 +4,12 @@ import cn from 'classnames';
 import { Controller, useForm } from 'react-hook-form';
 import { API } from '../../helpers/api';
 import { Button, Input, Rating, TextArea } from '../index';
-import { IReviewFormProps } from './ReviewForm.props';
+import { ReviewFormProps } from './ReviewForm.props';
 import { CloseIcon } from '../../assets/icons';
 import { IReviewFormInterface, IReviewSentResponse } from '../../interfaces/reviewForm.interface';
 import styles from './ReviewForm.module.sass';
 
-const ReviewForm = ({ productId, className, ...props }: IReviewFormProps): JSX.Element => {
+const ReviewForm = ({ productId, className, ...props }: ReviewFormProps): JSX.Element => {
   const { register, control, handleSubmit, formState: { errors }, reset } = useForm<IReviewFormInterface>();
   const [isSuccess, setIsSuccess] = useState<boolean>(false);
   const [isError, setIsError] = useState<string | null>(null);

@@ -1,12 +1,12 @@
 import React, { useEffect, useReducer } from 'react';
 import { sortReducer } from '../../reducers/sort.reducer';
 import { Advantages, HhCard, Htag, Product, Sort, Tag } from '../';
-import { ITopPageComponentProps } from './TopPageComponent.props';
+import { TopPageComponentProps } from './TopPageComponent.props';
 import { TopLevelCategory } from '../../interfaces';
 import { SortEnum } from '../Sort/Sort.props';
 import styles from './TopPageComponent.module.sass';
 
-const TopPageComponent = ({ page, products, firstCategory }: ITopPageComponentProps): JSX.Element => {
+const TopPageComponent = ({ page, products, firstCategory }: TopPageComponentProps): JSX.Element => {
   const [{ products: sortedProducts, sort }, dispatchSort] = useReducer(sortReducer, {
     products,
     sort: SortEnum.Rating,

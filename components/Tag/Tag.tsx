@@ -1,9 +1,9 @@
 import React from 'react';
 import cn from 'classnames';
-import { IParagraphProps } from './Tag.props';
+import { TagProps } from './Tag.props';
 import styles from './Tag.module.sass';
 
-const Tag = ({ size = 's', children, color = 'ghost', href, className, ...props }: IParagraphProps): JSX.Element => (
+const Tag = ({ size = 's', children, color = 'ghost', href, className, ...props }: TagProps): JSX.Element => (
   <div
     className={cn(styles.tag, className, {
       [styles.s]: size === 's',
