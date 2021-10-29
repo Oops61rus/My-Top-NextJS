@@ -2,6 +2,7 @@ import React, { Component, FC } from 'react';
 import { ILayoutProps } from './Layout.props';
 import { Footer, Header, Sidebar } from './';
 import { AppContextProvider, IAppContext } from '../context/app.context';
+import { Up } from '../components';
 import styles from './Layout.module.sass';
 
 const Layout = ({ children, ...props }: ILayoutProps): JSX.Element => (
@@ -12,6 +13,7 @@ const Layout = ({ children, ...props }: ILayoutProps): JSX.Element => (
       {children}
     </div>
     <Footer className={styles.footer} />
+    <Up />
   </div>
 );
 
