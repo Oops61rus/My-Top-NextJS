@@ -15,10 +15,26 @@
   grid-area: sidebar
 
 .body
+  outline: none
   grid-area: body
 
 .footer
   grid-area: footer
+
+.skipLink
+  display: block
+  position: fixed
+  left: 50%
+  top: -50px
+  padding: 10px
+  border-radius: 5px
+  overflow: hidden
+  background: $primary
+  color: $white
+  transition: all .2s
+
+.displayed
+  top: 10px
 
 @media screen and (max-width: $middle)
   .wrapper
