@@ -9,7 +9,7 @@ import { CloseIcon } from '../../assets/icons';
 import { IReviewFormInterface, IReviewSentResponse } from '../../interfaces/reviewForm.interface';
 import styles from './ReviewForm.module.sass';
 
-const ReviewForm = ({ productId, className, ...props }: ReviewFormProps): JSX.Element => {
+const ReviewForm = ({ productId, isOpened, className, ...props }: ReviewFormProps): JSX.Element => {
   const { register, control, handleSubmit, formState: { errors }, reset } = useForm<IReviewFormInterface>();
   const [isSuccess, setIsSuccess] = useState<boolean>(false);
   const [isError, setIsError] = useState<string | null>(null);
@@ -38,6 +38,7 @@ const ReviewForm = ({ productId, className, ...props }: ReviewFormProps): JSX.El
           )}
           placeholder='Имя'
           error={errors.name}
+          tabIndex={isOpened ? 0 : -1}
         />
         <Input
           {...register(
@@ -47,6 +48,7 @@ const ReviewForm = ({ productId, className, ...props }: ReviewFormProps): JSX.El
           placeholder='Заголовок отзыва'
           className={styles.title}
           error={errors.title}
+          tabIndex={isOpened ? 0 : -1}
         />
         <div className={styles.rating}>
           <span>Оценка:</span>
@@ -58,6 +60,7 @@ const ReviewForm = ({ productId, className, ...props }: ReviewFormProps): JSX.El
                 setRating={field.onChange}
                 ref={field.ref}
                 error={errors.rating}
+                tabIndex={isOpened ? 0 : -1}
               />
             )}
             rules={{ required: { value: true, message: 'Укажите рейтинг' } }}
@@ -74,9 +77,10 @@ const ReviewForm = ({ productId, className, ...props }: ReviewFormProps): JSX.El
           )}
           placeholder='Текст отзыва'
           className={styles.description}
+          tabIndex={isOpened ? 0 : -1}
         />
         <div className={styles.submit}>
-          <Button appearance='primary'>Отправить</Button>
+          <Button appearance='primary' tabIndex={isOpened ? 0 : -1}>Отправить</Button>
           <span className={styles.info}>
           * Перед публикацией отзыв пройдет предварительную модерацию и проверку
         </span>
