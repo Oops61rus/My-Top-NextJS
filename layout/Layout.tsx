@@ -32,13 +32,14 @@ const Layout = ({ children, ...props }: LayoutProps): JSX.Element => {
       </a>
       <Header className={styles.header} />
       <Sidebar className={styles.sidebar} />
-      <div
+      <main
+        role='main'
         className={styles.body}
         ref={bodyRef}
         tabIndex={0}
       >
         {children}
-      </div>
+      </main>
       <Footer className={styles.footer} />
       <Up />
     </div>
