@@ -2,7 +2,7 @@ import React, { KeyboardEvent, useContext, useState } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import cn from 'classnames';
-import { motion } from 'framer-motion';
+import { motion, useReducedMotion } from 'framer-motion';
 import { AppContext } from '../../context/app.context';
 import { firstLevelMenu } from '../../helpers/helpers';
 import { IFirstLevelMenuItem, IPageItem } from '../../interfaces/menu.interface';
@@ -11,15 +11,18 @@ import styles from './Menu.module.sass';
 const Menu = (): JSX.Element => {
   const { menu, firstCategory, setMenu } = useContext(AppContext);
   const [announce, setAnnounce] = useState<'closed' | 'opened' | undefined>(undefined);
+  const shouldReduceMotion = useReducedMotion();
   const router = useRouter();
 
   const variants = {
     visible: {
       marginBottom: 20,
-      transition: {
-        when: 'beforeChildren',
-        staggerChildren: 0.1,
-      },
+      transition: shouldReduceMotion
+        ? {}
+        : {
+          when: 'beforeChildren',
+          staggerChildren: 0.1,
+        },
     },
     hidden: { marginBottom: 0 },
   };
@@ -30,7 +33,7 @@ const Menu = (): JSX.Element => {
       height: 29,
     },
     hidden: {
-      opacity: 0,
+      opacity: shouldReduceMotion ? 1 : 0,
       height: 0,
     },
   };
