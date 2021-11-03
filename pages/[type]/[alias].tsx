@@ -12,10 +12,10 @@ import { API } from '../../helpers/api';
 const TopPage = ({ firstCategory, page, products }: ITopPageProps): JSX.Element => (
   <>
     <Head>
-      <title>{page.metaTitle}</title>
-      <meta name='description' content={page.metaDescription} />
-      <meta property='og:title' content={page.metaTitle} />
-      <meta property='og:description' content={page.metaDescription} />
+      <title>{page?.metaTitle}</title>
+      <meta name='description' content={page?.metaDescription} />
+      <meta property='og:title' content={page?.metaTitle} />
+      <meta property='og:description' content={page?.metaDescription} />
       <meta property='og:type' content='article' />
     </Head>
     <TopPageComponent
@@ -69,7 +69,7 @@ export const getStaticProps: GetStaticProps<ITopPageProps> = async ({ params }: 
       .get<ITopPageModel>(API.topPage.byAlias + params.alias);
     const { data: products } = await axios
       .post<IProductModel[]>(API.product.find, {
-        category: page.category,
+        category: page?.category,
         limit: 10,
       });
 
