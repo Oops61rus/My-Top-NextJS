@@ -6,11 +6,11 @@ import { API } from '../helpers/api';
 import '../styles/globals.sass';
 
 function MyApp({ Component, pageProps, router }: AppProps): JSX.Element {
-  router.events.on('routeChangeComplete', (url: string) => {
-    if (typeof window !== 'undefined') {
+  if (typeof window !== 'undefined') {
+    router.events.on('routeChangeComplete', (url: string) => {
       ym('hit', url);
-    }
-  });
+    });
+  }
 
   return (
     <>
