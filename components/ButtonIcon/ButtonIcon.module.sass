@@ -1,25 +1,30 @@
 @import "styles/variables"
 
 .button
-  width: 40px
-  height: 40px
-  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.05)
-  border-radius: 10px
   border: none
+  border-radius: 10px
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.05)
   cursor: pointer
+  height: 40px
+  width: 40px
 
 .primary
   background-color: $primary
+
   &:hover
     background-color: $primaryHover
+
   svg
     fill: $white
 
 .white
   background-color: $white
+
   &:hover
     background-color: $primary
+
     svg
       fill: $white
+
   svg
     fill: $primary

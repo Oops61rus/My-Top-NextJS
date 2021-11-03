@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { AppProps } from 'next/dist/next-server/lib/router/router';
 import Head from 'next/head';
 import ym, { YMInitializer } from 'react-yandex-metrika';
@@ -6,11 +6,11 @@ import { API } from '../helpers/api';
 import '../styles/globals.sass';
 
 function MyApp({ Component, pageProps, router }: AppProps): JSX.Element {
-  router.events.on('routeChangeComplete', (url: string) => {
-    if (typeof window !== 'undefined') {
+  useEffect(() => {
+    router.events.on('routeChangeComplete', (url: string) => {
       ym('hit', url);
-    }
-  });
+    });
+  }, [])
 
   return (
     <>
