@@ -44,22 +44,22 @@ const TopPageComponent = ({ page, products, firstCategory }: TopPageComponentPro
         ))}
       </div>
       <div className={styles.hhTitle}>
-        <Htag tag='h2'>Вакансии - {page.category}</Htag>
+        <Htag tag='h2'>Вакансии - {page?.category}</Htag>
         <Tag color='red' size='m'>hh.ru</Tag>
       </div>
-      {firstCategory === TopLevelCategory.Courses && page.hh && <HhCard {...page.hh} />}
-      {page.advantages &&
-      page.advantages.length > 0 && (
+      {firstCategory === TopLevelCategory.Courses && page?.hh && <HhCard {...page?.hh} />}
+      {page?.advantages &&
+      page?.advantages.length > 0 && (
         <>
           <Htag tag='h2'>Преимущества</Htag>
-          <Advantages advantages={page.advantages} />
+          <Advantages advantages={page?.advantages} />
         </>
       )}
       {
-        page?.seoText && <div className={styles.seo} dangerouslySetInnerHTML={{ __html: page.seoText }} />
+        page?.seoText && <div className={styles.seo} dangerouslySetInnerHTML={{ __html: page?.seoText }} />
       }
       <Htag tag='h2'>Получаемые навыки</Htag>
-      {page.tags.map(tag => <Tag color='primary' className={styles.getSkills} key={tag}>{tag}</Tag>)}
+      {page?.tags.map(tag => <Tag color='primary' className={styles.getSkills} key={tag}>{tag}</Tag>)}
     </div>
   );
 };
