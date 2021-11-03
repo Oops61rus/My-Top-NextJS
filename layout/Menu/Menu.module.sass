@@ -1,15 +1,16 @@
 @import "styles/variables"
 
 .firstLevel
-  display: grid
-  grid-template-columns: 24px 1fr
-  gap: 20px
   align-items: center
-  font-weight: 500
+  display: grid
   font-size: 18px
+  font-weight: 500
+  gap: 20px
+  grid-template-columns: 24px 1fr
   line-height: 25px
-  transition: .3s
   margin-top: 20px
+  transition: .3s
+
   svg
     transition: .3s
 
@@ -20,40 +21,40 @@
 .firstLevelActive,
 .firstLevel:hover
   color: $primary
+
   svg
     fill: $primary
 
 .secondLevel
-  margin-bottom: 10px
-  cursor: pointer
-  text-transform: uppercase
-  color: $greyDark
-  font-weight: 300
-  font-size: 12px
   background: none
   border: none
+  color: $greyDark
+  cursor: pointer
+  font-size: 12px
+  font-weight: 300
+  margin-bottom: 10px
   padding: 0
+  text-transform: uppercase
 
 .secondBlock
+  border-left: 1px solid DFDFDF
   list-style: none
-  padding: 0 0 0 32px
   margin-left: 12px
   margin-top: 15px
-
-  border-left: 1px solid #DFDFDF
+  padding: 0 0 0 32px
 
 .secondLevelBlock
-  overflow: hidden
   list-style: none
+  overflow: hidden
   padding: 0
-  
+
 .thirdLevel
-  margin-bottom: 10px
-  cursor: pointer
   color: $greyDark
+  cursor: pointer
+  display: block
   font-size: 14px
   font-weight: 500
-  display: block
+  margin-bottom: 10px
   outline-offset: -1px
 
 .thirdLevelActive,
