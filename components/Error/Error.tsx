@@ -2,8 +2,8 @@ import React from 'react';
 import { ErrorProps } from './Error.props';
 import { Button } from '../index';
 import { ArrowIcon } from '../../assets/icons';
-import styles from './Error.module.sass';
 import { useRouter } from 'next/router';
+import styles from './Error.module.sass';
 
 const Error = ({ statusCode, textError, descriptionError }: ErrorProps): JSX.Element => {
   const router = useRouter();
