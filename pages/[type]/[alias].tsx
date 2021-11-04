@@ -6,25 +6,32 @@ import { ParsedUrlQuery } from 'node:querystring';
 import { firstLevelMenu } from '../../helpers/helpers';
 import { withLayout } from '../../layout/Layout';
 import { TopPageComponent } from '../../components/';
-import { IMenuItem, IProductModel, ITopPageModel, TopLevelCategory} from '../../interfaces';
+import { IMenuItem, IProductModel, ITopPageModel, TopLevelCategory } from '../../interfaces';
 import { API } from '../../helpers/api';
+import { Error404 } from '../404';
 
-const TopPage = ({ firstCategory, page, products }: ITopPageProps): JSX.Element => (
-  <>
-    <Head>
-      <title>{page?.metaTitle}</title>
-      <meta name='description' content={page?.metaDescription} />
-      <meta property='og:title' content={page?.metaTitle} />
-      <meta property='og:description' content={page?.metaDescription} />
-      <meta property='og:type' content='article' />
-    </Head>
-    <TopPageComponent
-      firstCategory={firstCategory}
-      page={page}
-      products={products}
-    />
-  </>
-);
+const TopPage = ({ firstCategory, page, products }: TopPageProps): JSX.Element => {
+  if (!page || !products) {
+    return <Error404 />;
+  }
+
+  return (
+    <>
+      <Head>
+        <title>{page?.metaTitle}</title>
+        <meta name='description' content={page.metaDescription} />
+        <meta property='og:title' content={page.metaTitle} />
+        <meta property='og:description' content={page.metaDescription} />
+        <meta property='og:type' content='article' />
+      </Head>
+      <TopPageComponent
+        firstCategory={firstCategory}
+        page={page}
+        products={products}
+      />
+    </>
+  );
+};
 
 
 export default withLayout(TopPage);
@@ -44,7 +51,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
   return { paths, fallback: true };
 };
 
-export const getStaticProps: GetStaticProps<ITopPageProps> = async ({ params }: GetStaticPropsContext<ParsedUrlQuery>) => {
+export const getStaticProps: GetStaticProps<TopPageProps> = async ({ params }: GetStaticPropsContext<ParsedUrlQuery>) => {
   if (!params) {
     return { notFound: true };
   }
@@ -86,7 +93,7 @@ export const getStaticProps: GetStaticProps<ITopPageProps> = async ({ params }: 
   }
 };
 
-interface ITopPageProps extends Record<string, unknown> {
+interface TopPageProps extends Record<string, unknown> {
   menu: IMenuItem[];
   firstCategory: TopLevelCategory;
   page: ITopPageModel;
