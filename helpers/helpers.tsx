@@ -1,5 +1,6 @@
 import { BookIcon, CoursesIcon, ProductIcon, ServiceIcon } from '../assets/icons';
 import { IFirstLevelMenuItem, TopLevelCategory } from '../interfaces';
+import { booksImage, coursesImage, productsImage, servicesImage } from '../assets/images';
 
 export const firstLevelMenu: IFirstLevelMenuItem[] = [
   {
@@ -7,24 +8,28 @@ export const firstLevelMenu: IFirstLevelMenuItem[] = [
     name: 'Курсы',
     icon: <CoursesIcon />,
     id: TopLevelCategory.Courses,
+    image: coursesImage,
   },
   {
     route: 'books',
     name: 'Книги',
     icon: <BookIcon />,
     id: TopLevelCategory.Books,
+    image: booksImage,
   },
   {
     route: 'products',
     name: 'Товары',
     icon: <ProductIcon />,
     id: TopLevelCategory.Products,
+    image: productsImage,
   },
   {
     route: 'services',
     name: 'Сервисы',
     icon: <ServiceIcon />,
     id: TopLevelCategory.Services,
+    image: servicesImage,
   },
 ];
 

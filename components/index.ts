@@ -17,6 +17,7 @@ import ReviewForm from './ReviewForm/ReviewForm';
 import ButtonIcon from './ButtonIcon/ButtonIcon';
 import Up from './Up/Up';
 import Error from './Error/Error';
+import MainPage from './MainPage/MainPage';
 
 export {
   Htag,
@@ -39,4 +40,5 @@ export {
   ButtonIcon,
   Up,
   Error,
+  MainPage,
 };

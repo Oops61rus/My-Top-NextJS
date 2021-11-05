@@ -20,4 +20,5 @@ export interface IFirstLevelMenuItem {
   name: string;
   icon: JSX.Element;
   id: TopLevelCategory;
+  image: StaticImageData;
 }
